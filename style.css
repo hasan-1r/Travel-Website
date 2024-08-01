@@ -1,0 +1,1696 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*====================================================
+  * Template:   Travel Website
+  * Version:    1.0
+  * Author:     Hasan Riyaz
+  * Create :    21 June 2024
+====================================================*/
+
+/*==================================================*/
+/*               [Table of contents]                
+/*==================================================*/
+
+/*	
+
+    1. PRELOADER	
+    2. HEADER
+    3. HOME SECTION
+    4. ABOUT
+    5. TOURS SECTION
+    6. STATIC OFFER
+    7. POPULAR DESTINATION
+    8. BACKGROUND VIDEO
+    9. REVIEW SECTION
+    10.FOOTER
+    11.PAGE ABOUT US
+    12.PAGE TOURS STYLE
+    13.PAGE DESTINATION STYLE
+    14.PAGE BLOG STYLE
+    15.PAGE CONTACT STYLE
+    
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body,
+html {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden !important;
+}
+
+/*====================================================
+    1. PRELOADER 
+  ====================================================*/
+/* .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06e3f3;
+    transition: opacity .75s visiblity .75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading .75s ease infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+/*====================================================
+    2. HEADER 
+  ====================================================*/
+header {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 12vh;
+    transition: .5s ease-in-out;
+    background: transparent;
+}
+
+.bgc {
+    background: #00B2CA;
+    height: 12vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 75px;
+}
+
+
+.logo img {
+    background-size: cover;
+    display: block;
+    width: 10rem;
+    object-fit: cover;
+    transition: .6s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-weight: 500;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 .9rem;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav i {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+nav ul li:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.btn {
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+
+}
+
+.btn i {
+    font-size: 1.8rem;
+}
+
+.menu-btn {
+    margin-right: -10rem;
+}
+
+/*====================================================
+    3. HOME SECTION 
+  ====================================================*/
+.home {
+    padding: 0;
+}
+
+
+.slide-content {
+    width: 50%;
+    color: #fff;
+    margin: 11rem 20rem;
+
+}
+
+.slide {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.swiper {
+    height: 100vh;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.heading-span {
+    font-size: 3rem;
+    color: #000;
+    text-shadow: 0 5px rgba(0, 0, 0, .3);
+
+}
+
+h3 {
+    font-size: 3rem;
+    color: rgb(19, 186, 241);
+    padding-top: .6rem;
+    text-transform: uppercase;
+    text-shadow: 0 5px rgba(0, 0, 0, .3);
+}
+
+.main-para {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.home-btn {
+    font-size: 1.2vw;
+    padding: 1vw 1.2vw;
+    margin-left: 1rem;
+    border: 1px solid #000;
+    font-weight: 500;
+    color: #000;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.home-btn i {
+    padding-left: 0.5rem;
+}
+
+.home-btn:hover {
+    background: #00B2CA;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.swiper-button-next,
+::after,
+.swiper-button-prev::after {
+    font-size: 2rem;
+    color: #000;
+    padding: 1.5rem;
+}
+
+.swiper-button-prev {
+    padding: 1.5rem;
+}
+
+/*====================================================
+    4. ABOUT 
+  ====================================================*/
+.about-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    margin: 8rem 5rem;
+}
+
+.heading-normal-txt {
+    color: #00B2CA;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+}
+
+.h2-headings {
+    font-size: 45px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #03045E;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 16px;
+    line-height: 1.75em;
+    color: #676977;
+    margin-bottom: 20px;
+}
+
+.about-content-wrapper h2 span {
+    color: #00B2CA;
+    font-family: 'Ubuntu';
+}
+
+.list-about {
+    margin-top: 3rem;
+}
+
+.about-content-wrapper ul .icons {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.about-content-wrapper ul .icons i {
+    background: #00B2CA;
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.about-content-wrapper ul p {
+    margin-left: 1rem;
+    color: #676977;
+    font-weight: 500;
+}
+
+.agency-right-side .img {
+    position: relative;
+}
+
+.agency-right-side .img img {
+    width: 90%;
+    height: 80vh;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    transition: all .5s;
+    box-shadow: 6px 6px 8px #000, -1px -1px 1px #fff;
+}
+
+.agency-right-side .img::after {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 70px;
+    bottom: 0;
+    right: 0;
+    background: #00b4d8;
+    width: 80%;
+    height: 90%;
+    z-index: -2;
+}
+
+.agency-right-side .img img:hover {
+    transform: scale(.95);
+}
+
+
+/*====================================================
+    5. TOUR'S SECTION 
+  ====================================================*/
+#choose-place {
+    margin: 8rem 5rem;
+    padding: 6rem 0;
+}
+
+.choose-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+}
+
+.lg-img {
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.lg-img img {
+    height: 75vh;
+    width: 100%;
+}
+
+.lg-img:hover {
+    transform: scale(1.04);
+}
+
+.lg-img:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.h2-headings span {
+    color: #00B2CA;
+    font-family: 'Ubuntu';
+}
+
+.img-content {
+    position: absolute;
+    bottom: 10px;
+}
+
+.img-content h2 {
+    padding: 0 2rem;
+    color: #fff;
+}
+
+.hidden-content {
+    padding: 0.5rem 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    transform: translateY(120%);
+    transition: all .5s ease-in-out;
+}
+
+.lg-img:hover .hidden-content {
+    transform: translateY(0%);
+}
+
+.hidden-content span {
+    padding: .1rem;
+}
+
+.price-lable {
+    background: #00B4D8;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 40px;
+    right: -8px;
+    transform: rotate(-90deg);
+    font-weight: 500;
+}
+
+.row-wise-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    height: 50vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/*====================================================
+    6. STATIC OFFER
+  ====================================================*/
+#static-offer {
+    padding: 6rem 0;
+    background: url(./IMG/Offer-IMG.jpg)no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 75vh;
+    z-index: 4;
+}
+
+#static-offer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: -1;
+}
+
+.static-wrapper {
+    padding: 2rem 5rem;
+
+}
+
+.static-wrapper h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.6rem;
+    color: #fff;
+}
+
+.static-wrapper span {
+    color: #00B4D8;
+}
+
+.static-wrapper p {
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.static-wrapper .static-btn {
+    padding: .8rem 1.8rem;
+    background: #03045E;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.static-btn:hover {
+    background: transparent;
+    color: #00B4D8;
+    border: 2px solid #fff;
+    transition: .5s ease-in-out;
+}
+
+/*====================================================
+    7. POPULAR DESTINATION
+  ====================================================*/
+#top-destination {
+    padding: 10rem 5rem;
+}
+
+.top-destination-wrapper {
+    width: 60vh;
+    height: 80vh;
+}
+
+.carousel img {
+    height: 80vh;
+}
+
+.carousel:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 89%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.carousel-img-overlay {
+    width: 100%;
+}
+
+.hidden-content-carousel {
+    padding: 0.5rem 2rem;
+    color: #fff;
+    transform: translateY(120%);
+    transition: all .5s ease-in-out;
+}
+
+.hidden-content-carousel span {
+    padding-right: 2rem;
+}
+
+.hidden-content-carousel span i {
+    padding-left: .2rem;
+    padding-right: .4rem;
+}
+
+.carousel-img-overlay i {
+    padding-right: 1rem;
+}
+
+.carousel:hover .hidden-content-carousel {
+    transform: translateY(0%);
+}
+
+.carousel:hover {
+    /* transform: scale(1.2); */
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
+}
+
+.price-label {
+    background: #00B4D8;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 40px;
+    right: 38px;
+    transform: rotate(-90deg);
+    font-weight: 500;
+}
+
+/*====================================================
+    8. BACKGROUND VIDEO
+  ====================================================*/
+#thriller-miami {
+    padding: 6rem 0;
+    position: relative;
+}
+
+#thriller-miami video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    max-height: 650px;
+}
+
+.video-bg {
+    position: relative;
+}
+
+.video-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+.video-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.video-content h2 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    font-family: "ubuntu";
+    margin-bottom: 1rem;
+}
+
+.video-content span {
+    font-size: 1.2rem;
+    margin: 0 .5rem;
+    font-weight: 500;
+}
+
+/*====================================================
+    9. REVIEW SECTION
+  ====================================================*/
+#reviews {
+    padding: 4rem 5rem;
+    width: 100%;
+    background: url(./IMG/Review-bg.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+/* .review-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+} */
+
+
+
+.review-head {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 12rem;
+}
+
+.review-content {
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    padding: 1rem;
+}
+
+.review-wrapper {
+    overflow: hidden;
+    color: #fff;
+    width: 50%;
+    margin-top: -12rem;
+
+}
+
+.review-wrapper .icons {
+    color: #e4a853;
+}
+
+.test-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test-img img {
+    width: 10%;
+    object-fit: cover;
+    margin: .6rem 1rem;
+}
+
+.icons i {
+    font-size: 12px;
+}
+
+.icons p {
+    color: #fff;
+    font-weight: 500;
+}
+
+.guest {
+    font-size: .8rem;
+    color: #fff;
+    margin-bottom: 1.4rem;
+}
+
+.lead-2 {
+    font-size: 16px;
+    line-height: 1.75em;
+    color: #ffffffce;
+    margin-bottom: 20px;
+}
+
+/* INFO */
+
+.review-info {
+    margin-top: -12rem;
+}
+
+.review-info h5 {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.5em;
+    padding: 3rem 0;
+    transform: translate(50%);
+    margin-right: -18rem;
+}
+
+.review-info .phone-call {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 30px;
+    color: #fff;
+    transform: translate(60%);
+    margin-left: 4rem;
+}
+
+.review-info .phone-call p {
+    padding-left: .8rem;
+    font-size: 20px;
+}
+
+.check-info {
+    color: #fff;
+    transform: translate(60%);
+    margin-left: 4rem;
+}
+
+/*====================================================
+    10. FOOTER
+  ====================================================*/
+#footer {
+    padding: 3rem 5rem;
+    background: #03045E;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid lightgrey;
+}
+
+.ft-content {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    color: #fff;
+    margin: .4rem 1rem;
+}
+
+.lead-3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.75em;
+    color: #fff;
+}
+
+.f-icons i {
+    padding: 1rem;
+    font-size: 2.5rem;
+    background: #00B4D8;
+}
+
+.f-content {
+    padding: 1rem;
+}
+
+/* Footer Content 2nd */
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 0;
+    grid-gap: 2rem;
+    color: #fff;
+    margin: 4rem 0;
+}
+
+.about-footer img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.about-footer .lead {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Social Icons */
+.social-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons li {
+    padding: .6rem;
+}
+
+.social-icons li a {
+    font-size: 1.2rem;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: .4rem .6rem;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.social-icons li a:hover {
+    transform: translateY(-12px);
+    background-color: #0077B6;
+}
+
+.links {
+    margin-left: 3.5rem;
+}
+
+.links ul li {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.links ul li a:hover {
+    color: #0077B6;
+}
+
+.subscribe .lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+form {
+    position: relative;
+}
+
+.subscribe input {
+    width: 100%;
+    outline: none;
+    border: 1px solid lightgrey;
+    padding: 1.4rem 1rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.subscribe h2 {
+    margin-bottom: .6rem;
+}
+
+.subscribe button {
+    display: block;
+    position: absolute;
+    top: 11%;
+    right: 2%;
+    padding: 1rem 1.8rem;
+    font-weight: 500;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background: #00B4D8;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+    border-top: 1px solid lightgrey;
+}
+
+.bottom-footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    padding-top: 1rem;
+    letter-spacing: 1px;
+}
+
+/*====================================================
+    11. PAGE ABOUT US
+  ====================================================*/
+
+/* BANNER STYLE */
+.header-banner {
+    background: url(IMG/About-Banner.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    z-index: 4;
+}
+
+.header-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.banner-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-right: 12rem;
+    margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.banner-content h5 {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    padding-left: 6rem;
+}
+
+.banner-content h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    margin-right: 25rem;
+}
+
+.banner-content h1 span {
+    color: #03045E;
+    padding-left: 3rem;
+
+}
+
+/* TEAM */
+.team-section {
+    padding: 120px 0;
+    background: #03045E;
+    padding-left: 5rem;
+}
+
+.section-subtitle {
+    color: #00B4D8;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.section-title {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: #00B4D8;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.card img {
+    height: 70vh;
+    width: 95%;
+    box-shadow: 5px 5px 20px #000;
+    overflow: hidden;
+}
+
+.card-content {
+    width: 350px;
+    height: 110px;
+    padding: 5px;
+    position: absolute;
+    background: rgba(27, 27, 27, .5);
+    color: #fff;
+    text-align: center;
+    top: 120rem;
+    transition: .5s ease-in-out;
+}
+
+.team-name {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.card-content span {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.card-content p {
+    font-size: 16px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 3rem;
+}
+
+.card:hover {
+    cursor: pointer;
+
+}
+
+.card:hover .card-content {
+    top: 100rem;
+    bottom: 240px;
+    background: rgba(0, 0, 0, .5);
+    height: 67vh;
+}
+
+.card:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*====================================================
+    12. PAGE TOUR'S STYLE
+  ====================================================*/
+
+.tour-banner {
+    background: url(IMG/Tour-Banner.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    z-index: 4;
+}
+
+.tour-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.tour-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-right: 12rem;
+    margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.tour-content h5 {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    padding-left: 8rem;
+}
+
+.tour-content h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 8rem;
+    margin-right: 25rem;
+}
+
+.tour-content h1 span {
+    color: #03045E;
+}
+
+/* TRAVEL COUNTRIES */
+
+/* ITALY */
+#travel-countries {
+    padding: 6rem 5rem;
+}
+
+.country-1 {
+    background: url(./IMG/map1.png) center center no-repeat;
+    background-size: contain;
+}
+
+.travel-countries-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    grid-gap: 2rem;
+}
+
+.countries-content ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    color: #676977;
+}
+
+.countries-content ul li {
+    margin: 1.5rem 0;
+}
+
+.countries-content ul li i {
+    margin: 0rem .5rem;
+    color: #2095AE;
+    font-size: 1.4rem;
+}
+
+.countries-content .tour-btn {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+    background: #2095AE;
+    color: #fff;
+    padding: 14px 25px;
+    margin-top: 1.4rem;
+}
+
+.tour-btn i {
+    padding-left: 8px;
+}
+
+.slide-content-wrapper2 {
+    margin-top: -6rem;
+}
+
+.slide-content-wrapper2 img {
+    height: 74vh;
+    width: 89%;
+}
+
+.swiper-slide2 {
+    flex-shrink: 0;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block;
+}
+
+/* FRANCE */
+.france-content {
+    padding: 12rem 0;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 100%;
+    grid-gap: 6rem;
+}
+
+.country-france {
+    margin-left: 2rem;
+}
+
+.country-2 {
+    background: url(./IMG/map2.png) center center no-repeat;
+    background-size: contain;
+}
+
+.h2-head {
+    margin-top: -4rem;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #03045E;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.h2-head span {
+    color: #00B2CA;
+    font-family: 'Ubuntu';
+}
+
+/*====================================================
+    13. PAGE DESTINATION STYLE
+  ====================================================*/
+.dest-banner {
+    background: url(IMG/Dest-Banner.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    z-index: 4;
+}
+
+.dest-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.dest-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-right: 12rem;
+    margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.dest-content h5 {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    padding-left: 8rem;
+}
+
+.dest-content h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 8rem;
+    margin-right: 25rem;
+}
+
+/* POPULAR DESTINATION */
+.hidden-content-2 .dest-span {
+    padding-right: 25rem;
+}
+
+.dest-content h1 span {
+    color: #03045E;
+}
+
+.hidden-content-2 {
+    padding: 0.5rem 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    transform: translateY(120%);
+    transition: all .5s ease-in-out;
+}
+
+.lg-img:hover .hidden-content-2 {
+    transform: translateY(0%);
+}
+
+.img-content h2 i {
+    padding-right: .8rem;
+}
+
+.hidden-content-2 span {
+    padding-right: 1.2rem;
+}
+
+.hidden-content-2 span i {
+    padding-left: .2rem;
+}
+
+/*====================================================
+    14. PAGE BLOG STYLE
+  ====================================================*/
+.blog-banner {
+    background: url(IMG/Blog-Banner.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    z-index: 4;
+}
+
+.blog-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.blog-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-right: 12rem;
+    margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.blog-content h5 {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    padding-left: 8rem;
+}
+
+.blog-content h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 8rem;
+    margin-right: 25rem;
+}
+
+.blog-content h1 span {
+    color: #03045E;
+}
+
+/* BLOG IMAGE SECTION  */
+#travel-blog {
+    height: 100vw;
+    padding: 6rem 5rem;
+    overflow: hidden;
+}
+
+.bottom-blog-section {
+    margin-top: 5rem;
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    height: 50vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.blog-img {
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+
+.blog-img img {
+    height: 75vh;
+    width: 100%;
+}
+
+
+.blog-img:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.blog-img-overlay {
+    width: 100%;
+}
+
+.blog-img-content {
+    padding: 25px;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    transition: all .5s ease-in;
+    transform: translateY(-100%);
+}
+
+.blog:hover .blog-img-content {
+    transform: translateY(0%);
+}
+
+.blog-img-content h2 {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 7rem;
+    position: relative;
+    color: #fff;
+}
+
+.blog-img-content p {
+    color: #90E0EF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.blog .price-lable {
+    transform: rotate(0deg);
+    padding: .6rem .8rem;
+    margin: -1rem 18rem;
+}
+
+.blog .price-lable p {
+    font-size: 18px;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+.blog .price-lable p i {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+/*====================================================
+    15. PAGE CONTACT STYLE
+  ====================================================*/
+.cont-banner {
+    background: url(IMG/Cont-Banner.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    z-index: 4;
+}
+
+.cont-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.cont-head {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-right: 12rem;
+    margin-top: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cont-head h5 {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    padding-left: 8rem;
+}
+
+.cont-head h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 8rem;
+    margin-right: 30rem;
+}
+
+.cont-head h1 span {
+    color: #03045E;
+}
+
+/* CONTACT CONTENT */
+#contact {
+    padding: 4rem 5rem;
+}
+
+.cont-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+
+#contact h2 {
+    font-size: 27px;
+}
+
+.cont-left-side h2 {
+    padding-bottom: 2rem;
+}
+
+
+.cont-content {
+    padding: 1rem;
+}
+
+.cont-icons {
+    font-size: 2.5rem;
+    color: #00B4D8;
+}
+
+.lead-4 {
+    font-size: 16px;
+    line-height: 1.75em;
+    color: #676977;
+}
+
+.c-lead {
+    color: #00B4D8;
+    font-size: 24px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* CONTACT FORM */
+
+.cont-right-side .form-h2 {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 100%;
+    background: #00B4D8;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.cont-right-side .sidebar {
+    background: #f4f5f8;
+    padding: 25px 25px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+}
+
+.contact-input:focus {
+    border: 1px solid #00B4D8;
+}
+
+input,
+textarea {
+    font-family: 'Barlow', sans-serif;
+    outline: none;
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: none;
+    border: none;
+    display: block;
+    width: 100%;
+    line-height: 1.5em;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5a5b63;
+    margin-top: 2rem;
+}
+
+.send-btn {
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.2em;
+    background: #00B4D8;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.sidebar button img {
+    height: 16px;
+    font-weight: 700;
+    padding-left: 3px;
+    padding-top: 4px;
+}
+
+/* MAP SECTION */
+iframe {
+    margin-top: 4rem;
+}
