@@ -1,7 +1,7 @@
 /* ===============================================
      SWIPER 1 - HOME SLIDER 
    =============================================== */
-var swiper = new Swiper(".home-slider", {
+var swiper = new swiper(".home-slider", {
     loop: true,
     grabCursor: true,
     navigation: {
@@ -14,7 +14,7 @@ var swiper = new Swiper(".home-slider", {
 /* ===============================================
      SWIPER 2 - REVIEW'S
    =============================================== */
-const swiper3 = new Swiper(".swiper3", {
+const swiper3 = new swiper(".swiper3", {
     slidesPreview: 1,
     spaceBetween: 0,
     slidePreGroup: 1,
